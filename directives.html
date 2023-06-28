@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Directives</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+     <div ng-app=""
+          ng-init="students=[{name:'siddu',branch:'CSE'},{name:'raju',branch:'CSE'},{name:'kulsum',branch:'CSE'}]">
+          <p>Students Details{{name}}</p>
+          <ul>
+               <li ng-repeat="student in students">
+                    <p>Name : {{ student.name }}</p>
+                    <p>branch: {{student.branch}}</p>
+
+               </li>
+          </ul>
+          <input type="checkbox" ng-model="enable"> disable btn
+          <button ng-disabled="enable">Click Me !!</button>
+          <br>
+          <input type="checkbox" ng-model="show"> show btn
+          <button ng-show="show">Click Me !!</button>
+          <br>
+          <input type="checkbox" ng-model="hide"> hide btn
+          <button ng-hide="hide">Click Me !!</button>
+          <br>
+          <p>no.of times pressing:{{count}}</p>
+          <button ng-click="count=count+1">click me!!</button>
+     </div>
+
+</body>
+
+</html>
