@@ -14,7 +14,8 @@
           <p>Hello {{name | lowercase}}</p>
           <p>Savings {{saving |currency:"Rs"}}</p>
           <ul>
-               <input type="search" ng-model="search">
+               <input type="search" ng-model="search">   
+               <!-- ng model is over -->
                <li ng-repeat='e in emp | filter:search '> {{e}} </li>
                <!-- <li ng-repeat='x in numbers | myFilter'> {{x }} </li>   -->
                  <li ng-repeat='x in numbers '> {{x | myFilter}} </li>
