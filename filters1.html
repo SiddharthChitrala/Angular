@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>filters</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+     <!--  -->
+     <!-- <div ng-app="">
+          <input type="checkbox" ng-model="myvar">Please check
+          <h1 ng-if="myvar">You are checked</h1>
+ 
+     </div> -->
+     <!--  -->
+     <!--  -->
+     <div ng-app="myApp" ng-controller="myctrl">
+          <input type="checkbox" name="" ng-model="myvar1"> print even numbers
+          <ul ng-if="myvar1">
+                     <li ng-repeat='x in numbers | myFilter '> {{x }} </li>  
+          </ul>
+     </div>
+     <script>
+          var myApp = angular.module('myApp', [])
+          myApp.filter("myFilter", function () {
+               return function (numbers) {
+                    var filteredNumbers = [];
+                    for (var i = 0; i < numbers.length; i++) {
+                         if (numbers[i] % 2 == 0) {
+                              filteredNumbers.push(numbers[i]);
+                         }
+                    }
+                    return filteredNumbers;
+               };
+          });
+
+          myApp.controller('myctrl', function ($scope) {
+               $scope.numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          });
+     </script>
+</body>
+
+</html>
