@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>App</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+     <h1>Angular App </h1>
+     <div ng-app="myApp" ng-controller="MyController">
+          <div>Enter Your First Name: <input type="text" name="" ng-model="user.firstName"></div>
+          <div>Enter Your Last Name: <input type="text" name="" ng-model="user.lastName"></div>
+          <p>Hello {{user.fullName()}}</p>
+     </div>
+     <script>
+          var myApp = angular.module('myApp', []);
+          // $scope is a global variable in AngularJS and it's used to bind data with HTML
+          myApp.controller("MyController", function ($scope) {
+               // console.log(this);
+               // this.firstName = "John";
+               // this.lastName = "Doe";
+               $scope.user = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    fullName: function () {
+                         // return `${$scope.user.firstName} ${$scope.user.lastName}`;
+                         var userObj;
+                         userObj = $scope.user;
+                         // alert(`${userobj.firstName} ${userobj.lastName}`);
+                         return userObj.firstName + ' ' + userObj.lastName;
+                    }
+               }
+          });
+     </script>
+</body>
+
+</html>
