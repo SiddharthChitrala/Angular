@@ -1,0 +1,91 @@
+Angular intro:
+
+What is angular js?
+
+Angular is an open-source front-end framework build using the js.
+
+A client-side framework.
+
+Developed and being maintained by Google.
+
+It is an excellent framework for building single-phase app and line of business applications.
+
+Angular js uses MVC architecture to develop web apps. It has two parts, Model View Controller.
+
+Why Angular js?
+
+Dependency injection: Dependency injection specifies a design pattern in which components Are given their dependency instead of hard coding them within the component.
+
+Two-way data binding: Angular JS creates a two-way data binding between the selected element and the order prop model.Order props is then used as input of order by filter.
+
+Testing: Angular JS is designed in a way that we can test right from the start. So, it is very easy to test any of its components through unit testing and end to end testing.
+
+Model view controller: In Angular js, It is very easy to develop application in a clean MVC way.You just have to split your application code into MVC components i.e Model view and the controller.
+
+Directors, filters, modules, routes etc...
+
+
+>>>>>>>>>>>>>>>>>>>> MVC architecture <<<<<<<<<<<<<<<
+
+MVC stands for Model View Control. This is a software design pattern for developing the Web applications.
+
+It is very popular because It isolates the application logic from the user interface layer and supports separation of concerns.
+
+Uh model view controller pattern is made up of following three parts --
+
+Model:
+The data that we want our application to work with goes here in this part. In other words It is the lowest Level of pattern responsible for Maintaining data.
+
+View :
+It is responsible for Displaying all or A portion of the data to the user.
+
+Controller :
+This part interacts with both models as well as views.In other words ,It is a software code that controls the interaction between the model and the view.
+
+        Event
+          |
+          |
+      controller
+          |
+          |
+         View
+         |  |
+         |  |
+         model
+
+The main purpose of this pattern is that it separates application logic from presentation layer..
+
+Install Angular JS in Visual Studio Code
+
+ng version
+
+npm install -g @angular/cli
+
+ng version
+
+Angular CLI: 16.1.1
+Node: 16.15.1
+Package Manager: npm 8.11.0
+OS: win32 x64
+
+
+>>>>>>>>>>>>Angular JS directives
+
+Angular js facilitates you to extend HTML with new attributes.
+These attributes are called directives.
+
+This is a set of Built in directive in Angular js, which offers functionality to your application. You can also define your own directives.
+
+Directors are special attributes Starting with ng - prefix.
+Following are the most common directives :
+
+ngIf, ngFor, ngSwitch, ngClass etc...
+
+*ng-app :These directors starts the Angular JS application.
+
+*ng-init :This directive initializes application data.
+
+*ng-model :This directive defends the model that is variable to be used in Angular JS
+
+*ng-repeat :
+This directive repeats a block of code for each element present inside an array or object.In other words, this directive repeats html elements for each item in a collection.
