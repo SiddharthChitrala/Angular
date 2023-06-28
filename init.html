@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Demo</title>
+     <title>Add</title>
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
-
 <body>
-
-     <div ng-app="">
-          <p> Enter Your name:</p>
-          <input type="text" name="" ng-Model="name">
-          <p>Hello <span ng-bind="name"></span></p>
-          <p>The sum of 5 & 4 is:{{5+4}}</p>
+     <div ng-app="" ng-init="name='Welcome To My App'">
+          <p>Hello {{name}}</p>
      </div>
 </body>
-
 </html>

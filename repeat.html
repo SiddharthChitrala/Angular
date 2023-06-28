@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>repeat</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+     <div ng-app=""
+          ng-init="students=[{name:'siddu',branch:'CSE'},{name:'raju',branch:'CSE'},{name:'kulsum',branch:'CSE'}]">
+          <p>Students Details{{name}}</p>
+          <ul>
+               <li ng-repeat="student in students">
+                    <p>Name : {{ student.name }}</p>
+                    <p>branch: {{student.branch}}</p>
+               </li>
+          </ul>
+
+          <table>
+               <thead>
+                    <tr>
+                         <th>Name</th>
+                         <th>Branch</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr ng-repeat="student in students">
+                         <td>{{ student.name }}</td>
+                         <td>{{ student.branch }}</td>
+                    </tr>
+               </tbody>
+          </table>
+     </div>
+</body>
+
+</html>
