@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Multiple Expressions Demo</title>
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
+
 <body>
-     <div ng-app="">
-          
+     <div ng-app="" ng-init=" rollno=1 ;name = 'siddu';marks=[50,40,45,49,47] ">
+          <p>Name:{{name}}</p>
+          <P>rollno:{{rollno}}</P>
+          <ul>
+               <li>English :{{marks [0]}}</li>
+               <li>Chemistry : {{marks[1]}} </li>
+               <li>Maths : {{marks[2]}} </li>
+               <li>Physics : {{marks[3]}} </li>
+               <li>Computer Science : {{marks[4]}} </li>
+          </ul>
+
+          <!-- AngularJS -->
+          <table>
+               <thead>
+                    <tr>
+                         <th>Subject</th>
+                         <th>Marks</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr>
+                         <td>English</td>
+                         <td>{{marks[0]}}</td>
+                    </tr>
+                    <tr>
+                         <td>Chemistry</td>
+                         <td>{{marks[1]}}</td>
+                    </tr>
+                    <tr>
+                         <td>Maths</td>
+                         <td>{{marks[2]}}</td>
+                    </tr>
+                    <tr>
+                         <td>Physics</td>
+                         <td>{{marks[3]}}</td>
+                    </tr>
+                    <tr>
+                         <td>Computer Science</td>
+                         <td>{{marks[4]}}</td>
+                    </tr>
+               </tbody>
+          </table>
      </div>
+
 </body>
+
 </html>
