@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>filters</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+     <!--  -->
+     <div ng-app="myApp" ng-controller="myctrl">
+
+          <mydir> </mydir>
+
+     </div>
+     <script>
+          var myApp = angular.module('myApp', [])
+          myApp.directive("mydir",function()
+          {
+               return{
+                    template:"<h2>user defined directive </h2>"
+               }
+
+          });
+     </script>
+</body>
+
+</html>

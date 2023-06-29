@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>filters</title>
+     <style>
+          table,th,td{
+               border:3px solid rgba(88, 79, 79, 0.18);
+               border-collapse: collapse;
+               padding: 15px;
+               text-align: center;
+          }
+     </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+     <!--  -->
+     <div ng-app="myApp" ng-controller="myCtrl">
+          <table>
+                    <tr>
+                         <td>name</td>
+                         <td>{{student.name}}</td>
+                    </tr>
+                    <tr>
+                         <td>Roll No.</td>
+                         <td>{{student.rollno}}</td>
+                    </tr>
+                    <tr>
+                         <td>Branch:</td>
+                         <td>{{student.branch}}</td>
+                    </tr>
+                
+           <tr>
+               <td>Sem 1</td>
+               <td>
+                    <table>
+                         <tr>
+                              <th>Subjects</th>
+                              <th>Marks</th>
+                         </tr>
+                         <tr ng-repeat="sem in student.sem1">
+                              <td>{{sem.subject}}</td>
+                              <td>{{sem.marks}}</td>
+                         </tr>
+                    </table>
+               </td>
+           </tr>
+           <tr>
+               <td>Sem 2</td>
+               <td>
+                    <table>
+                         <tr>
+                              <th>Subjects</th>
+                              <th>Marks</th>
+                         </tr>
+                         <tr ng-repeat="sem in student.sem2">
+                              <td>{{sem.subject}}</td>
+                              <td>{{sem.marks}}</td>
+                         </tr>
+                    </table>
+               </td>
+           </tr>
+           <tr>
+               <td>Sem 3</td>
+               <td>
+                    <table>
+                         <tr>
+                              <th>Subjects</th>
+                              <th>Marks</th>
+                         </tr>
+                         <tr ng-repeat="sem in student.sem3">
+                              <td>{{sem.subject}}</td>
+                              <td>{{sem.marks}}</td>
+                         </tr>
+                    </table>
+               </td>
+           </tr>
+               <!-- <tbody>
+                    <tr ng-repeat="sem in student.sem1">
+                         <td>{{ student.name }}</td>
+                         <td>{{ student.rollno }}</td>
+                         <td>{{ student.branch }}</td>
+                         <td>{{ sem.subject }} </td>
+                         <td>{{ sem.marks}}</td>
+                    </tr>
+
+               </tbody>
+               <tbody>
+
+                    <tr ng-repeat="sem in student.sem2">
+                         <td>{{ student.name }}</td>
+                         <td>{{ student.rollno }}</td>
+                         <td>{{ student.branch }}</td>
+                         <td>{{ sem.subject }} </td>
+                         <td>{{ sem.marks}}</td>
+                    </tr>
+               </tbody>
+               <tbody>
+
+                    <tr ng-repeat="sem in student.sem3">
+                         <td>{{ student.name }}</td>
+                         <td>{{ student.rollno }}</td>
+                         <td>{{ student.branch }}</td>
+                         <td>{{ sem.subject }} </td>
+                         <td>{{ sem.marks}}</td>
+                    </tr>
+               </tbody> -->
+
+          </table>
+     </div>
+     <script src="/modules/myApp.js"></script>
+     <script src="/modules/myCtrl.js"></script>
+</body>
+
+</html>
