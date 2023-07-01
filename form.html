@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>form</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+     <div ng-app="myApp" ng-controller="myCtrl">
+          <!-- <input type="checkbox" ng-model="myVar" name="" id="">
+          <h1 ng-if="myVar">U have checked</h1> -->
+          <label for="Name"><b>Name:</b></label><br />
+          <input type="text" placeholder="Enter your name" required ng-model="name" /> <br>
+          <label for="Email"><b>Email:</b></label>
+          <input type="email" placeholder="Enter email address" required ng-model="email" /> <br>
+          Reset Form: <button ng-click='reset()'>Reset form</button>
+     </div>
+
+     <script>
+          var myApp = angular.module('myApp', []);
+          // controller code
+          myApp.controller('myCtrl', function ($scope) {
+               $scope.reset = function () {
+                    $scope.name = "";
+                    $scope.email = "";
+               }
+               $scope.reset();
+          });
+     </script>
+</body>
+
+</html>
