@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Demo</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>     
+</head>
+<body>
+     <!-- AngularJS View Dir --- it helps us to view the element by using controllers, script -->
+     <div ng-app="myApp", ng-controller="mainCtrl">
+          <a href="#about">about</a>
+          <div ng-view>
+               <!-- This will be replaced with views based on routes defined in config -->
+          </div>
+          <script type="text/ng-template" id="about.html">
+
+               <h3>This is about section</h3>
+               {{msg}}
+          </script>
+     </div>
+ 
+     <script>
+          //AngularJS Code goes here
+          var myApp=angular.module('myApp',['ngRoute'])
+          myApp.config(['$routeProvider',function($routeProvider){
+               $routeProvider
+               .when('/about',{
+                    templateUrl:'about.html',
+                    controller:'mainCtrl'
+               });
+          }])
+          myApp.controller("mainCtrl",function($scope){
+               $scope.msg="Show's the info of app"
+          })
+     </script>
+</body>
+</html>
